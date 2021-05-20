@@ -19,12 +19,12 @@ body {
   justify-content: center;
   height: 100%;
 }
-.start-box {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+.box {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(146, 94, 120, 1);
   padding: 50px;
   border-radius: 10px 10px 10px 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   /*width: 300px;
   height: 300px;*/
 }
@@ -36,8 +36,8 @@ body {
     font-size: large;
     text-decoration: none;
     font-weight: 600;
-    border: 1px solid rgba(146, 94, 120, 1);
-    background-color: transparent;
+    border: none;
+    background-color: rgba(146, 94, 120, 1);
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -45,8 +45,22 @@ body {
 }
 .btn:hover {
     font-size: x-large;
-    border: 1px solid transparent;
     background-color: rgba(146, 94, 120, 1);
     color: white;
     transition: all 0.5s;
+}
+.input {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border: 0 solid transparent;
+  border-radius: 5px;
+}
+.table{
+  margin: 0;
+  table-layout: initial;
+  width: 100%;
+  text-overflow: clip;
 }

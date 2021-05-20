@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parqués</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" src="js/core.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.6/sweetalert2.min.css" integrity="sha512-/D4S05MnQx/q7V0+15CCVZIeJcV+Z+ejL1ZgkAcXE1KZxTE4cYDvu+Fz+cQO9GopKrDzMNNgGK+dbuqza54jgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
-        <div class="start-box">
-            <div class="container">
-                <div>
+        <div class="box">
+            <div class="container" id="start">
+                <div id="active" class="slide">
                     <i class="fas fa-dice fa-10x"></i>
                     <h1 class="logo">Mi parqués</h1>
-                    <button class="btn" style="width: 100%;">Iniciar juego</button>
+                    <button class="btn" name="next" style="width: 100%;">Comenzar</button>
+                </div>
+                <div id="inactive" class="slide">
+                    <h1>Ingrese el nombre de los jugadores</h1>
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <input type="text" name="playerName" class="input" placeholder="Nombre del jugador">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="playerName" class="input" placeholder="Nombre del jugador">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="playerName" class="input" placeholder="Nombre del jugador">
+                            </td>
+                        </tr>
+                    </table>
+                    <button class="btn" name="next" style="width: 100%;">Siguiente</button>
+                </div>
+                <div id="inactive" class="slide">
+                    <h1>Selecciona tu color</h1>
+                    <button class="btn" name="next" style="width: 100%;">Iniciar juego</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
