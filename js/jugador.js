@@ -2,6 +2,7 @@ class Jugador{
     nombre = "";
     color = "";
     posicion = 0;
+    isPreso = false;
     constructor(nombre) {
         this.nombre = nombre;
     }
@@ -19,6 +20,12 @@ class Jugador{
     }
     get posicion() {
         return this.posicion;
+    }
+    get isPreso() {
+        return this.isPreso;
+    }
+    set isPreso(boolean) {
+        this.isPreso = new Boolean(boolean);
     }
 }
 export default Jugador;

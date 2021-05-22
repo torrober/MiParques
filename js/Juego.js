@@ -1,4 +1,10 @@
 import Jugador from "./jugador.js";
+import Circular from './circular.js';
+const circular = new Circular();
+circular.append('E');
+circular.head; // => Node { value: 'E', next: [Circular] }
+circular.last; // => Node { value: 'E', next: [Circular] }
+console.log(circular.get(0)); // => E
 let data = localStorage.getItem("jugadoresData");
 data = JSON.parse(data);
 let jugadores = [];
