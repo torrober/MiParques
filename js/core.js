@@ -2,7 +2,6 @@ import Jugador from './jugador.js';
 import Colores from './Colores.js';
 let currentDiv = 0;
 const jugadores = [];
-let comboboxValues = [];
 window.onload = () => {
     const slidenum = document.getElementsByClassName("slide").length;
     for (let index = 1; index < slidenum; index++) {
@@ -75,6 +74,7 @@ const addColoresToCombobox = () =>{
     }
 }
 const checkComboBoxValues = () => {
+    let comboboxValues = [];
     const comboboxes = document.getElementsByName("playerColor");
     for (let index = 0; index < comboboxes.length; index++) {
         comboboxValues.push(comboboxes[index].value);  
@@ -97,6 +97,11 @@ const checkComboBoxValues = () => {
     return error;
 }
 const assignColor = () => {
+    let comboboxValues = [];
+    const comboboxes = document.getElementsByName("playerColor");
+    for (let index = 0; index < comboboxes.length; index++) {
+        comboboxValues.push(comboboxes[index].value);  
+    }
     for (let index = 0; index < jugadores.length; index++) {
         const element = jugadores[index];
         switch(comboboxValues[index]) {
