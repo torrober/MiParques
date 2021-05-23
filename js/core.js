@@ -47,6 +47,7 @@ const createJugadores = () => {
         console.log("Jugador "+(index+1)+":"+jugadorTemp.nombre);
         jugadores.push(jugadorTemp);
     }
+    assignPos();
     console.log(jugadores);
 }
 const putJugadorNombres = () => {
@@ -114,8 +115,22 @@ const assignColor = () => {
             case 'AZUL':
                 element.color = Colores.AZUL;
                 break
-        }   
+        }  
     } 
+}
+const assignPos = () => {
+    const jug1 = jugadores[0];
+    jug1.posicionX = 41;
+    jug1.posicionY = 38;
+    jug1.isPreso = false;
+    const jug2 = jugadores[1];
+    jug2.posicionX = 41;
+    jug2.posicionY = 38;
+    jug2.isPreso = false;
+    const jug3 = jugadores[2];
+    jug3.posicionX = 41;
+    jug3.posicionY = 38;
+    jug2.isPreso = false;
 }
 const putData = () => {
     const jugadoresData = JSON.stringify(jugadores);
@@ -149,3 +164,17 @@ const btn = document.getElementsByName("next");
 for (let index = 0; index < btn.length; index++) {
     btn[index].addEventListener("click", slideController);
 }
+const audio = document.getElementById("musica");
+const btnMusica = document.getElementById("musica_btn");
+let audioOn = true;
+btnMusica.addEventListener("click", () => {
+    if(audioOn) {
+        audio.muted = true;
+        btnMusica.innerText = "Activar musica";
+        audioOn = false;
+    } else {
+        audio.muted = false;
+        btnMusica.innerText = "Desactivar musica";
+        audioOn = true;
+    } console.log(audioOn);
+})
